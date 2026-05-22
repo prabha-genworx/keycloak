@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment files
+.env
+.env.*
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local config / secrets
+config.local.py
+secrets.json
+
+# Docker overrides
+docker-compose.override.yml
+
+# Ignore generated docs or temp files
+*.tmp
+*.bak
