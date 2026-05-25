@@ -46,3 +46,5 @@ docker-compose.override.yml
 # Ignore generated docs or temp files
 *.tmp
 *.bak
+
+test.py
