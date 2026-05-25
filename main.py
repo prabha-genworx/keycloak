@@ -20,6 +20,11 @@ from client_roles.get_client_role import router as get_client_role_router
 from client_roles.delete_client_role import router as delete_client_role_router
 from client_roles.create_client_role import router as create_client_role_router
 from client_roles.update_client_role import router as update_client_role_router
+from organization.create_organization import router as create_organization_router
+from organization.get_organizations import router as list_organizations_router
+from organization.delete_organization import router as delete_organization_router
+from organization.update_organization import router as update_organization_router
+from organization.add_member import router as add_member_router
 
 app = FastAPI(title="Keycloak Realm Manager")
 
@@ -45,3 +50,8 @@ app.include_router(get_client_role_router, prefix="/keycloak", tags=["client-rol
 app.include_router(create_client_role_router, prefix="/keycloak", tags=["client-roles"])
 app.include_router(update_client_role_router, prefix="/keycloak", tags=["client-roles"])
 app.include_router(delete_client_role_router, prefix="/keycloak", tags=["client-roles"])
+app.include_router(create_organization_router, prefix="/keycloak", tags=["organizations"])
+app.include_router(list_organizations_router, prefix="/keycloak", tags=["organizations"])
+app.include_router(delete_organization_router, prefix="/keycloak", tags=["organizations"])
+app.include_router(update_organization_router, prefix="/keycloak", tags=["organizations"])
+app.include_router(add_member_router, prefix="/keycloak", tags=["organizations"])

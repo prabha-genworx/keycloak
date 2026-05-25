@@ -28,8 +28,6 @@ async def update_organization(realm: str, org_name: str, org: OrganizationUpdate
     org_id = await _get_org_id(token, realm, org_name)
 
     payload = {"name": org_name}
-    if org.display_name is not None:
-        payload["displayName"] = org.display_name
     if org.enabled is not None:
         payload["enabled"] = org.enabled
 

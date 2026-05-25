@@ -39,7 +39,6 @@ async def list_organizations(
         {
             "id": o["id"],
             "name": o["name"],
-            "display_name": o.get("displayName", ""),
             "enabled": o.get("enabled"),
         }
         for o in response.json()
@@ -70,7 +69,6 @@ async def get_organization(realm: str, org_name: str):
     return {
         "id": o["id"],
         "name": o["name"],
-        "display_name": o.get("displayName", ""),
         "enabled": o.get("enabled"),
         "realm": realm,
     }

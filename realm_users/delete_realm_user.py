@@ -33,3 +33,6 @@ async def delete_user(username: str):
         raise HTTPException(status_code=r.status_code, detail=r.text)
 
     return {"message": "User deleted successfully", "username": username}
+
+
+
